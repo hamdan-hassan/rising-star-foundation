@@ -11,7 +11,7 @@ function App() {
   const SkillsTraining = lazy(() => import("./pages/SkillsTraining"));
   return (
     <Suspense fallback={<Loader />}>
-      <Router>
+      <Router basename={import.meta.env.DEV ? "/" : "/rising-star-foundation/"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
